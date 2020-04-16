@@ -1,0 +1,787 @@
+/** Add any CSS you need to this file. */
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #2b2d2f;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f5f5dc;
+    margin: 5px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container a img {
+    width: 10vh;
+    height: 10vh;
+}
+
+header .info {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    color: #f5f5dc;
+}
+
+.header-menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-menu a {
+    color: #f5f5dc;
+}
+
+.logo-text {
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #f5f5dc;
+    margin: 5px;
+}
+
+main {
+    width: 100%;
+}
+
+.left {
+    width: 15%;
+    height: 90vh;
+    background-color:#dbdbd7;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav.sidebar {
+    width: 100%;
+    height: 70%;
+}
+
+ul.sidebar-categories {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #2b2d2f;
+}
+
+li.sidebar-category:hover {
+    color: #f5f5dc;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.right {
+    width: 85%;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.default-view {
+    width: 100%;
+    height: 1800px;
+    background-color:  #e4e3de;;
+}
+
+.default-view .presentation {
+    width: 100%;
+    height: 90vh;
+    background-image: url("../images/default/d0.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.presentation .shop-now {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.presentation .shop-now h1 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 15px;
+    color: #2b2d2f;
+}
+
+.presentation .shop-now button {
+    border: 2px solid #2b2d2f;
+    padding: 8px 16px;
+    background-color: #f5f5dc;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    transition-duration: 0.2s;
+}
+
+
+.presentation .shop-now button:hover {
+    background-color: #2b2d2f;
+    color: #f5f5dc;
+}
+
+.default-view .show-case {
+    width: 100%;
+    height: 1200px;
+    background-color: #e4e3de;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.default-view .show-case .item,
+.justbecause .show-case .item,
+.balloons .show-case .item,
+.roses .show-case .item,
+.sunflowers .show-case .item,
+.tulips .show-case .item
+{
+    width: 300px;
+    height: 300px;
+    background-size: 300px 300px;
+    margin: 15px;
+}
+
+.default-view .show-case .item1 {
+    background-image: url("../images/default/default2.jpg");
+}
+
+.default-view .show-case .item2 {
+    background-image: url("../images/default/default3.jpg");
+}
+
+.default-view .show-case .item3 {
+    background-image: url("../images/default/default5.jpg");
+}
+
+.default-view .show-case .item4 {
+    background-image: url("../images/default/default6.jpg");
+}
+
+.default-view .show-case .item5 {
+    background-image: url("../images/default/default9.jpg");
+}
+
+.default-view .show-case .item6 {
+    background-image: url("../images/default/default15.jpg");
+}
+
+.default-view .show-case .item7 {
+    background-image: url("../images/default/default1.jpg");
+}
+
+.default-view .show-case .item8 {
+    background-image: url("../images/default/default4.jpg");
+}
+
+.default-view .show-case .item9 {
+    background-image: url("../images/default/default7.jpg");
+}
+
+
+
+
+
+.right .categories {
+    width: 100%;
+    height: 1300px;
+    background-color: #e4e3de;
+    display: none;
+}
+
+.roses, .tulips, .sunflowers, .balloons, .justbecause {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.categories .header {
+    width: 100%;
+    height: 10vh;
+    background-color: #2b2d2f;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #f5f5dc;
+}
+
+.categories .header i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.categories .balloons .show-case,
+.categories .justbecause .show-case,
+.categories .roses .show-case,
+.categories .sunflowers .show-case,
+.categories .tulips .show-case {
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.roses .show-case .item1 {
+    background-image: url("../images/roses/rose3.jpg");
+}
+
+.roses .show-case .item2 {
+    background-image: url("../images/roses/rose16.jpg");
+}
+
+.roses .show-case .item3 {
+    background-image: url("../images/roses/rose5.jpg");
+}
+
+.roses .show-case .item4 {
+    background-image: url("../images/roses/rose4.jpg");
+}
+
+.roses .show-case .item5 {
+    background-image: url("../images/roses/rose1.jpg");
+}
+
+.roses .show-case .item6 {
+    background-image: url("../images/roses/rose15.jpg");
+}
+
+.roses .show-case .item7 {
+    background-image: url("../images/roses/rose10.jpg");
+}
+
+.roses .show-case .item8 {
+    background-image: url("../images/roses/rose8.jpg");
+}
+
+.roses .show-case .item9 {
+    background-image: url("../images/roses/rose9.jpg");
+}
+
+.roses .show-case .item10 {
+    background-image: url("../images/roses/rose13.jpg");
+}
+
+.roses .show-case .item11 {
+    background-image: url("../images/roses/rose14.jpg");
+}
+
+.roses .show-case .item12 {
+    background-image: url("../images/roses/rose2.jpg");
+}
+
+.tulips .show-case .item1 {
+    background-image: url("../images/tulips/tulip4.jpg");
+}
+
+.tulips .show-case .item2 {
+    background-image: url("../images/tulips/tulip11.jpg");
+}
+
+.tulips .show-case .item3 {
+    background-image: url("../images/tulips/tulip8.jpg");
+}
+
+.tulips .show-case .item4 {
+    background-image: url("../images/tulips/tulip2.jpg");
+}
+
+.tulips .show-case .item5 {
+    background-image: url("../images/tulips/tulip5.jpg");
+}
+
+.tulips .show-case .item6 {
+    background-image: url("../images/tulips/tulip6.jpg");
+}
+
+.tulips .show-case .item7 {
+    background-image: url("../images/tulips/tulip7.jpg");
+}
+
+.tulips .show-case .item8 {
+    background-image: url("../images/tulips/tulip10.jpg");
+}
+
+.tulips .show-case .item9 {
+    background-image: url("../images/tulips/tulip9.jpg");
+}
+
+.tulips .show-case .item10 {
+    background-image: url("../images/tulips/tulip3.jpg");
+}
+
+.tulips .show-case .item11 {
+    background-image: url("../images/tulips/tulip12.jpg");
+}
+
+.tulips .show-case .item12 {
+    background-image: url("../images/tulips/tulip1.jpg");
+}
+
+.sunflowers .show-case .item1 {
+    background-image: url("../images/sunflowers/sunflower1.jpg");
+}
+
+.sunflowers .show-case .item2 {
+    background-image: url("../images/sunflowers/sunflower7.jpg");
+}
+
+.sunflowers .show-case .item3 {
+    background-image: url("../images/sunflowers/sunflower2.jpg");
+}
+
+.sunflowers .show-case .item4 {
+    background-image: url("../images/sunflowers/sunflower12.jpg");
+}
+
+.sunflowers .show-case .item5 {
+    background-image: url("../images/sunflowers/sunflower10.jpg");
+}
+
+.sunflowers .show-case .item6 {
+    background-image: url("../images/sunflowers/sunflower4.jpg");
+}
+
+.sunflowers .show-case .item7 {
+    background-image: url("../images/sunflowers/sunflower8.jpg");
+}
+
+.sunflowers .show-case .item8 {
+    background-image: url("../images/sunflowers/sunflower6.jpg");
+}
+
+.sunflowers .show-case .item9 {
+    background-image: url("../images/sunflowers/sunflower16.jpg");
+}
+
+.sunflowers .show-case .item10 {
+    background-image: url("../images/sunflowers/sunflower11.jpg");
+}
+
+.sunflowers .show-case .item11 {
+    background-image: url("../images/sunflowers/sunflower3.jpg");
+}
+
+.sunflowers .show-case .item12{
+    background-image: url("../images/sunflowers/sunflower15.jpg");
+}
+
+.balloons .show-case .item1 {
+    background-image: url("../images/balloons/balloon11.jpg");
+}
+
+.balloons .show-case .item2 {
+    background-image: url("../images/balloons/balloon4.jpg");
+}
+
+.balloons .show-case .item3 {
+    background-image: url("../images/balloons/balloon12.jpg");
+}
+
+.balloons .show-case .item4 {
+    background-image: url("../images/balloons/balloon2.jpg");
+}
+
+.balloons .show-case .item5 {
+    background-image: url("../images/balloons/balloon9.jpg");
+}
+
+.balloons .show-case .item6 {
+    background-image: url("../images/balloons/balloon7.jpg");
+}
+
+.balloons .show-case .item7 {
+    background-image: url("../images/balloons/balloon5.jpg");
+}
+
+.balloons .show-case .item8 {
+    background-image: url("../images/balloons/balloon8.jpg");
+}
+
+.balloons .show-case .item9 {
+    background-image: url("../images/balloons/balloon6.jpg");
+}
+
+.balloons .show-case .item10 {
+    background-image: url("../images/balloons/balloon3.jpg");
+}
+
+.balloons .show-case .item11 {
+    background-image: url("../images/balloons/balloon10.jpg");
+}
+
+.balloons .show-case .item12{
+    background-image: url("../images/balloons/balloon1.jpg");
+}
+
+.justbecause .show-case .item1 {
+    background-image: url("../images/justbecause/justbecause4.jpg");
+}
+
+.justbecause .show-case .item2 {
+    background-image: url("../images/justbecause/justbecause8.jpg");
+}
+
+.justbecause .show-case .item3 {
+    background-image: url("../images/justbecause/justbecause12.jpg");
+}
+
+.justbecause .show-case .item4 {
+    background-image: url("../images/justbecause/justbecause9.jpg");
+}
+
+.justbecause .show-case .item5 {
+    background-image: url("../images/justbecause/justbecause6.jpg");
+}
+
+.justbecause .show-case .item6 {
+    background-image: url("../images/justbecause/justbecause3.jpg");
+}
+
+.justbecause .show-case .item7 {
+    background-image: url("../images/justbecause/justbecause2.jpg");
+}
+
+.justbecause .show-case .item8 {
+    background-image: url("../images/justbecause/justbecause5.jpg");
+}
+
+.justbecause .show-case .item9 {
+    background-image: url("../images/justbecause/justbecause10.jpg");
+}
+
+.justbecause .show-case .item10 {
+    background-image: url("../images/justbecause/justbecause1.jpg");
+}
+
+.justbecause .show-case .item11 {
+    background-image: url("../images/justbecause/justbecause11.jpg");
+}
+
+.justbecause .show-case .item12 {
+    background-image: url("../images/justbecause/justbecause2.jpg");
+}
+
+.info-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+}
+
+.info-container .info {
+    width: 100%;
+    height: 80%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.categories .show-case .item:hover .info-container {
+    display: block;
+    align-items: center;
+}
+
+.add-to-cart {
+    padding: 5px 20px;
+    display: flex;
+    cursor: pointer;
+    background-color: #f5f5dc;
+    border: 2px solid #2b2d2f;
+}
+
+.add-to-cart span {
+    margin-right: 5px;
+}
+
+.footer {
+    width: 100%;
+    height: 45vh;
+    background-color: #2b2d2f;
+    display: flex;
+    flex-direction: column;
+    color: #f5f5dc;
+}
+
+.footer li {
+    font-size: 12px;
+    color: gray;
+}
+
+.footer li:hover {
+    color: lightgray;
+}
+
+.footer .top {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .top h2 {
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.footer .center {
+    flex: 3;
+    display: flex;
+}
+
+.footer .center .external-links {
+    display: flex;
+    flex: 2;
+   
+}
+
+.external-links .follow, .external-links .legal {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .center .form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer form {
+    margin-top: 20px;
+}
+
+.footer .center h4 {
+    font-weight: 400;
+    font-size: 16px;
+    color: lightgray;
+}
+
+.footer small {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+.footer .center .follow li,  .footer .center .legal li{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.footer button {
+    padding: 3px 10px;
+    background-color: #f5f5dc;
+    border: 1px solid #2b2d2f;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 7%;
+}
+
+
+.footer .bottom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* media query part */
+
+
+@media only screen and (max-width: 1354px) {
+    .right .categories {
+        height: 1400px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .right .categories {
+        height: 2050px;
+    }
+}
+
+@media only screen and (max-width: 692px) {
+    .right .categories {
+        height: 4050px;
+    }
+}
+
+
+
+@media only screen and (max-width: 815px) {
+    header .info {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        margin-left: 30px;
+        flex: 1;
+        cursor: pointer;
+    }
+
+    .logo-container, .header-menu {
+        flex: 2;
+    }
+
+    .logo-container img {
+        height: 7vh;
+        width: 7vh;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .burger-active-left {
+        display: block;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    
+
+    .presentation .shop-now h1 {
+        letter-spacing: 13px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .default-view {
+        height: 2600px;
+    }
+
+    .default-view .show-case {
+        height: 2000px;
+    }
+}
+
+@media only screen and (max-width: 1140px)
+{
+    .presentation .shop-now h1 {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .presentation .shop-now h1 {
+        font-size: 28px;
+    }
+
+    .default-view {
+        height: 3800px;
+    }
+
+    .default-view .show-case {
+        height: 3000px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+   
+
+    .presentation .shop-now h1 {
+        letter-spacing: 7px;
+    }
+
+    .footer .center {
+        flex-direction: column;
+    }
+
+    .footer {
+        height: 70vh;
+    }
+
+    .footer .external-links, .footer .form-container {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer form {
+        margin-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 520px){
+   
+    .presentation .shop-now h1{
+        font-size: 24px;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+
+}
+
+
+

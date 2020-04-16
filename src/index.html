@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/7d5cbaffec.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- 
+       Our header  accross the top consist of 3 parts:
+       1.Logo container
+       2.Info about the store 
+       3.navigation menu which includes a link to the contact us page
+       It uses a background color which is different from the background color of the main part of the page.
+      -->
+  <header id="header">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <div class="logo-container">
+      <a href="./index.html">
+        <img src="images/flower.svg" alt="Logo">
+        <h4 class="logo-text">Aisha</h4>
+      </a>
+    </div>
+
+    <div class="info">
+      <p>We bloom since 2014</p>
+    </div>
+
+    <nav class="header-menu">
+      <ul class="nav-links">
+        <li class="nav-link">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+       The main section of the home page has 2 main parts : the left part and the right part 
+       Left side of the page includes our sidebar menu whic has the categories (5 categories)
+       that our store offers to its customers.Using this sidebar menu,users can find what they want 
+       more easily,narrowing the number of the choices.
+   
+       Right side of the home page has 3 different sections ,mainly presentation, showcase and shortcut 
+       for birthday flowers sections. Presentation section offers the customers a gift card which they can get by 
+       clicking "SHOP NOW" button.Showcase part includes several images. In the birthday flowers section 
+       users can find a button by clicking which they can shop flower designed for special occasion.
+   
+       Footer of the site includes store's name, a short form which enables the users to subscribe to the 
+       newsletter of the store by filling in their email addresses and clicking subscribe button.
+       Several social media links for terms&privacy have also been include in footer.
+   
+      -->
+  <main>
+    <div class="left">
+      <nav class="sidebar">
+        <ul class="sidebar-categories">
+          <li class="sidebar-category" id="roses" onclick="show_category(this.id)">Roses</li>
+          <li class="sidebar-category" id="tulips" onclick="show_category(this.id)">Tulips</li>
+          <li class="sidebar-category" id="sunflowers" onclick="show_category(this.id)">Sunflowers</li>
+          <li class="sidebar-category" id="balloons" onclick="show_category(this.id)">Balloons</li>
+          <li class="sidebar-category" id="justbecause" onclick="show_category(this.id)">Just Because</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="right">
+      <div class="default-view">
+        <div class="presentation">
+          <div class="shop-now">
+            <h1>Send a Gift Card</h1>
+            <button>SHOP NOW</button>
+          </div>
+        </div>
+
+        <div class="show-case">
+          <div class="item item1"></div>
+          <div class="item item2"></div>
+          <div class="item item3"></div>
+          <div class="item item4"></div>
+          <div class="item item5"></div>
+          <div class="item item6"></div>
+          <div class="item item7"></div>
+          <div class="item item8"></div>
+          <div class="item item9"></div>
+        </div>
+
+        <!-- <div class="shop-birthday-flowers">
+          <div class="shop-now">
+            <h1>Let's celebrate!</h1>
+            <p>Show your love, let the flowers express your feelings.</p>
+            <button>SHOP BIRTHDAY FLOWERS</button>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="categories">
+        <div class="roses">
+          <div class="header">
+            <i class="fas fa-window-close fa-2x" onclick="hide_category(this)"></i>
+          </div>
+
+          <div class="show-case">
+            <div class="item item1">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Simply Pink Gift Bouquet</h3>
+                  <p>A ready-to-display pink gift bouquets featuring pink Aqua Roses.</p>
+                  <span>39.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item2">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Fairy Blossom</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item3">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Red Roses</h3>
+                  <p>The perfect gift to send with love.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item4">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Simply Gourgeous Bouquet</h3>
+                  <p>A collection of Roses and Gypsophila</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item5">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Blue Moon Rose</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>8.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item6">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Pink Rose</h3>
+                  <p>A beautiful collection of pink Roses</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item7">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Pink and White Roses</h3>
+                  <p>A beautiful collection of pink and white Roses</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item8">
+              <div class="info-container">
+                <div class="info">
+                  <h3>White Roses</h3>
+                  <p>A beautiful collection of white Roses</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item9">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Rose Garden</h3>
+                  <p>This bouquet is filled with Roses.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item10">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Pop of color bouquet</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>40.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item11">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Wedding bouquet</h3>
+                  <p>Beatiful Bridal Bouquet</p>
+                  <span>27.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item12">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Simply Gourgeous Bouquet</h3>
+                  <p>A collection of white,purple Roses and Gypsophila</p>
+                  <span>25.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tulips">
+          <div class="header">
+            <i class="fas fa-window-close fa-2x" onclick="hide_category(this)"></i>
+          </div>
+
+          <div class="show-case">
+            <div class="item item1">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Spring Tulips</h3>
+                  <p>Send the scents of spring with this bouquet.</p>
+                  <span>25.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item2">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Orange Crush</h3>
+                  <p>Delightful cylinder vase arrangement of one dozen orange tulips.</p>
+                  <span>28.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item3">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Pink Tulips</h3>
+                  <p>Clear glass cylinder vase arrangement of fresh pink tulips.</p>
+                  <span>40.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item4">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Spring Tulips</h3>
+                  <p>One dozen gorgeous fresh spring tulips .</p>
+                  <span>28.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item5">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Tangerine Dream Bouquet with Vase</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>44.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item6">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Ballerina</h3>
+                  <p>This flower bouquet is blooming with light pink tulips.</p>
+                  <span>35.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item7">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Pink Tulips</h3>
+                  <p>Popular Springtime flower arrangement of 5 fresh yellow tulips.</p>
+                  <span>19.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item8">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Purple Tulips</h3>
+                  <p>Celebrate a spring birthday, send your love.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item9">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Orange Crush</h3>
+                  <p>Delightful cylinder vase arrangement of one dozen orange tulips.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item10">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Purple Tulips</h3>
+                  <p>Celebrate a spring birthday, send your love.</p>
+                  <span>25.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item11">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Yellow Tulips</h3>
+                  <p>Popular Springtime flower arrangement of 5 fresh yellow tulips.</p>
+                  <span>19.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item12">
+              <div class="info-container">
+                <div class="info">
+                  <h3>All the Rage</h3>
+                  <p>This bouquet is made up of rainbow colored tulips</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sunflowers">
+          <div class="header">
+            <i class="fas fa-window-close fa-2x" onclick="hide_category(this)"></i>
+          </div>
+
+          <div class="show-case">
+            <div class="item item1">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Garden</h3>
+                  <p>A sunflower garden bouquet is a wonderful reminder of the stunning flowers that grow in a beautiful garden.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item2">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Beatiful Bridal Bouquet</h3>
+                  <p>Beatiful Bridal Bouquet</p>
+                  <span>40.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item3">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Delight</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>24.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item4">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Succulent Bouquet</h3>
+                  <p>Fill your recipient's home and heart with this warm sunflower bouquet!</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item5">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Fresh Sunflower</h3>
+                  <p>Send some sunshine to your loved one with our Fresh Sunflower Harvest bouquet.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item6">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Flower Fields</h3>
+                  <p>It's the beauty of a field of flowers from the comfort of home.</p>
+                  <span>24.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item7">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Hello Sunshine</h3>
+                  <p>Here comes the sun...and a whole lotta lovely flowers!</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item8">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Radiance</h3>
+                  <p></p>
+                  <span>15.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item9">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Stunning Sunflowers</h3>
+                  <p>Nothing says SMILE like sunflowers. </p>
+                  <span>39.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item10">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Delight</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>10.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item11">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Mixed Bouquet</h3>
+                  <p>If summer were a bouquet, the Sunflower Mixed Bouquet would be it.</p>
+                  <span>47.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item12">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunflower Bouquet</h3>
+                  <p>Like a breath of fresh air, these beautiful fall sunflowers are the perfect reminder that autumn is here.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="balloons">
+          <div class="header">
+            <i class="fas fa-window-close fa-2x" onclick="hide_category(this)"></i>
+          </div>
+
+          <div class="show-case">
+            <div class="item item1">
+              <div class="info-container">
+                <div class="info">
+                  <h3>All the Hearts</h3>
+                  <p>The perfect Valentine's Day package.</p>
+                  <span>50.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item2">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Colorful Balloons</h3>
+                  <p>Balloons Round Creative Party Decorations.</p>
+                  <span>69.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item3">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Green and White Balloons</h3>
+                  <p>Simply Balloons Bouquet.</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item4">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Blue Balloons</h3>
+                  <p>Balloons Round Creative Party Decorations.</p>
+                  <span>19.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item5">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Birthday Ballons</h3>
+                  <p>"Save the Date" with Gorgeous Balloons.</p>
+                  <span>9.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item6">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Number Balloons</h3>
+                  <p>"Save the Date" with Gorgeous Number Balloons.</p>
+                  <span>4.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item7">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Foil Heart</h3>
+                  <p>Made of foil accent this balloon will float 2-3 days.</p>
+                  <span>9.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item8">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Christmas Red Solid Balloons</h3>
+                  <p>Decor Valentines Day Decorations New Year Party Supplies for Wedding Birthday Graduation Independence Day</p>
+                  <span>49.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item9">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Jumbo Bubble Bouquet</h3>
+                  <p>Balloons Round Creative Party Decorations.</p>
+                  <span>19.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item10">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Holiday Decorations</h3>
+                  <p>Balloons Round Creative Party Decorations.</p>
+                  <span>10.91&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item11">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Jumbo Bubble Bouquet</h3>
+                  <p>Balloons Round Creative Party Decorations.</p>
+                  <span>19.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item12">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Christmas Red Solid Balloons</h3>
+                  <p>Decor Valentines Day Decorations New Year Party Supplies for Wedding Birthday Graduation Independence Day</p>
+                  <span>49.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="justbecause">
+          <div class="header">
+            <i class="fas fa-window-close fa-2x" onclick="hide_category(this)"></i>
+          </div>
+
+          <div class="show-case">
+            <div class="item item1">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Spring Roses</h3>
+                  <p>A gorgeous selection of springtime Roses.</p>
+                  <span>30.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item2">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Simply Gourgeous Bouquet</h3>
+                  <p>A luxurious hand-tied bouquet.</p>
+                  <span>25.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item3">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sweet Moments</h3>
+                  <p>An exquisite hand tied bouquet.</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item4">
+              <div class="info-container">
+                <div class="info">
+                  <h3>White Carnations</h3>
+                  <p>A collection of white Carnations</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item5">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Wedding bouquet</h3>
+                  <p>Beatiful Bridal Bouquet</p>
+                  <span>27.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item6">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Simply Gourgeous Bouquet</h3>
+                  <p>A wildly beautiful bouquet.</p>
+                  <span>50.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item7">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sunshine Delight</h3>
+                  <p>A bright and sunny collection of yellow flowers</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item8">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sweet Moments</h3>
+                  <p>An exquisite hand tied bouquet.</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item9">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Purple Hydrangea</h3>
+                  <p>A collection of purple Hydrangea</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item10">
+              <div class="info-container">
+                <div class="info">
+                  <h3>White Roses</h3>
+                  <p>A collection of white Roses</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item11">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Red Roses</h3>
+                  <p>The perfect gift to send with love.</p>
+                  <span>29.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item12">
+              <div class="info-container">
+                <div class="info">
+                  <h3>Sweet Moments</h3>
+                  <p>An exquisite hand tied bouquet.</p>
+                  <span>20.99&#36;</span>
+                  <button class="add-to-cart">
+                    <span>Add to cart</span>
+                    <i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="footer">
+        <div class="top">
+          <h2>Aisha</h2>
+        </div>
+
+        <div class="center">
+          <div class="form-container">
+            <form action="https://formspree.io/xlewjvqg" method="POST">
+              <div class="label">
+                <label for="email">Email</label>
+              </div>
+
+              <div class="input">
+                <input type="email" id="email" name="email">
+              </div>
+
+              <div class="button">
+                <button>Subscribe</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="external-links">
+            <div class="follow">
+              <nav>
+                <h4>Follow</h4>
+                <ul class="social-media-links">
+                  <li class="social-media-link">Instagram</li>
+                  <li class="social-media-link">Twitter</li>
+                  <li class="social-media-link">LinkedIn</li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="legal">
+              <nav>
+                <h4>Legal</h4>
+                <ul class="legal-links">
+                  <li class="legal-link">Terms</li>
+                  <li class="legal-link">Privacy</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <small>&copy; 2020 Aisha. All Rights Reserved.</small>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+<!--
+      Part 1: Main Store Page
+
+      Requirements:
+
+      1. Header across the top must include your store's name, a logo,
+      and use a different background colour, web font, etc.  You must also include
+      a link to your contact.html page.  Your header should include info about
+      what the store is, what it sells, etc.  Use some images to try and draw
+      the user in.  NOTE: place all your site's images in the `src/images/` directory.
+
+      2. Below the header, a multi-column layout of items you can purchase in the
+      store.  You must have at least 10 items in your store, and at least 2
+      categories of items. For example, if you are selling clothing, you might
+      have categories for Men, Women, and Children, and each category would have
+      its own set of items.  Each item should include:
+      
+        - a picture
+        - the item's name/title
+        - a more complete description of the item
+        - a category (i.e., each item must belong to a category)
+        - a price.
+      
+      Each item should be its own "card" (i.e., some kind of box around each item
+      separating one from the next, with suitable whitespace between).
+
+      3. A sidebar (left or right, depending on your design) of the item layout
+      section, showing the different categories of items in your store.  If a
+      user clicks on one of the categories, use CSS and JavaScript to hide all
+      other items in the store (i.e., only show items for the chosen category).
+      Make sure you include a way to return to seeing all categories, and make it
+      obvious to the user that they are only seeing a partial list of items when
+      you filter by category (i.e., use CSS and HTML to change things somehow).
+
+      4. Below the items, a footer with the name of the store, any relevant links you
+      need to give users, as well as a small HTML form for entering an Email
+      address and clicking a "Subscribe" button to subscribe to the store's
+      newsletter. Use https://formspree.io/ to automatically submit the form to
+      your email address (i.e., when a user fills out their email address and
+      clicks submit, *you* should get that information sent to your email
+      address via formspree.io).  Make sure you setup your account on
+      https://formspree.io/.
+
+      5. Use two different Web Fonts for your store.  The titles should be different
+      from any regular text.  Use a free font service like https://fonts.google.com/
+      or any other that you choose.  You can also experiment with different font
+      sizes and colours to draw attention toward or away from various parts of
+      your design.
+
+      6. Pick a colour theme using a tool like https://colorhunt.co/ with at least
+      3 colours (primary, secondary, accent), and use them throughout your site
+      for backgrounds, borders, fonts. Your store page needs to look attractive
+      and marks will be given for good a good looking site.  No one will buy from
+      a store that looks like its owners aren't professional or don't care about
+      details.  Also make sure that the colour contrast in your site is suitable
+      for everyone to read.
+
+      7. Use modern CSS to help you achieve your layout.  For example, Flexbox
+      and CSS Grid can help you create professional looking layouts.  Here
+      are some guides to get you started:
+
+       - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+       - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+       
+      You are also welcome to use existing CSS libraries to help you with your layout,
+      but you must also include your own styles (i.e., you can't use a library
+      for everything in your design).
+
+      8. Make sure you don't use copyrighted materials from other sites.  If you use
+      icons, fonts, images, etc., make sure you are legally permitted to reuse them,
+      and include references to indicate where you got them. Some resources to consider:
+
+        - https://unsplash.com/ for images
+        - https://fontawesome.com/ for icons
+        - https://gallery.manypixels.co/ or https://undraw.co/illustrations for illustrations (SVG)
+
+      9. Make sure you reduce the download size of images you include in your
+      store.  Users don't want to download 10s or 100s of megabytes of data, especially
+      on mobile.  You can use an online tool like https://squoosh.app/ to help you
+      reduce images.  You will lose marks if your images aren't optimized for the web.
+       
+
+      10. Make sure you have no JavaScript or other errors in your Dev Tools Console.
+      Run your site, and test all aspects of it with the Console open, and fix
+      any issues you encounter.
+
+      11. Make sure your forms all work as they should, testing them yourself,
+      and also have someone else test it for you.  The easiest way to find bugs
+      in software is to let someone who didn't build it try to use it!
+      
+    -->
